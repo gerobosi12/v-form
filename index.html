@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="Kinetic Logo.png" alt="logo" />
+
+      <div class="title">Talk to a Consolidation Specialist (888) 888-8888</div>
+    </header>
+
+    <div class="container">
+      <h1>What is the best time to reach you ?</h1>
+      <div id="step1">
+        <h2>Select Start Date</h2>
+        <select id="startDate" onchange="enableContinue()">
+          <option value="" disabled selected>Choose your time</option>
+          <option value="8 AM CST">8 AM CST</option>
+          <option value="9 AM CST">9 AM CST</option>
+          <option value="10 AM CST">10 AM CST</option>
+          <option value="11 AM CST">11 AM CST</option>
+          <option value="12 PM CST">12 pM CST</option>
+        </select>
+        <br /><br />
+        <button id="continueBtn" disabled onclick="goToStep2()">
+          Continue <b>></b>
+        </button>
+      </div>
+
+      <div id="step2" class="hidden">
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name" placeholder="Name" required /><br /><br />
+        <input type="text" id="surname" placeholder="Surname" required />
+        <br /><br />
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          required
+        /><br /><br />
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Phone Number"
+          required
+          pattern="[0-9]{10}"
+          maxlength="13"
+        /><br /><br />
+        <label
+          ><input type="checkbox" id="accept" onchange="enableSubmit()" /> By
+          clicking the button above, you acknowledge, consent and agree to the
+          following: a) Our Privacy Policy and consent to receive notices and
+          other communications electronically; b) We take your privacy
+          seriously. You are providing express written consent for to share your
+          information with up to four (4) of its and for parties calling on
+          behalf of, or authorized third parties on their behalf to contact you
+          (including through automated means; e.g. autodialing, text and
+          pre-recorded messaging) about legal services or other Mass Tort
+          related offers via telephone, mobile device (including SMS and MMS)
+          and/or email, even if your telephone number is currently listed on any
+          state, federal, local or corporate Do Not Call list; c) Consent to be
+          contacted is not required in order to purchase goods or services from
+          or the that contact you. You may choose to speak with an individual
+          service provider by dialing (888) 888-8888.</label
+        ><br /><br />
+        <button id="submitBtn" disabled onclick="submitForm()">
+          Submit Your Details <b>></b>
+        </button>
+      </div>
+
+      <div id="result" class="hidden">
+        <h2>Submitted Information</h2>
+        <p id="output"></p>
+      </div>
+    </div>
+
+    <p></p>
+    Terms and Conditions | Privacy Policy | California Privacy.
+    <p></p>
+  </body>
+
+  <footer class="custom-footer">
+    <p>
+      This site is not a part of the Facebook website or Facebook Inc.
+      Additionally, Facebook does NOT endorse this site. FACEBOOK is a trademark
+      of FACEBOOK, Inc. This site is not a part of the YouTube website or
+      Google, LLC. Additionally, This site is NOT endorsed by Google in any way.
+      While we may provide you preliminary information on whether you qualify
+      for compensation, your local governing body ultimately determines who
+      qualifies and what claims are paid. This site is provided for
+      informational purposes only. If you have questions about whether you
+      qualify, please contact an attorney. THIS IS A PAID ATTORNEY/ADVOCATE
+      ADVERTISEMENT. *While we may provide you preliminary information on
+      whether you may qualify for compensation, the U.S. District Court: Eastern
+      District of North Carolina ultimately determines who qualifies and what
+      claims are paid. This site is provided for informational purposes only. If
+      you have questions about whether you qualify, please contact an attorney.
+      This website uses Google Analytics and Google Ads to track your journey
+      for marketing purposes. If you wish to opt-out of user-tracking click
+      here.
+    </p>
+  </footer>
+</html>
